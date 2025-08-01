@@ -64,7 +64,7 @@ main {
 .input-sect p {
   margin-bottom: 0.3rem;
 }
-.input-box input {
+.input-box > input {
   font-family: "Space Mono", monospace;
   font-weight: 700;
   border-radius: 0.3rem;
@@ -74,6 +74,9 @@ main {
   color: var(--green-900);
   background-color: var(--grey-50);
   border: none;
+}
+.input-box > input:focus {
+  outline: 2px solid var(--green-400);
 }
 .input-box:not(.tip-sect) {
   padding: 0.3rem 0 0.3rem 1rem;
@@ -85,6 +88,21 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
+}
+
+.tips-sect > input {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  width: 7.2rem;
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  background-color: var(--grey-50);
+  color: var(--green-900);
+  text-align: right;
+}
+.tips-sect > input:focus {
+  outline: 2px solid var(--green-400);
 }
 
 .tips {
@@ -161,4 +179,9 @@ main {
 .reset-btn:hover {
   background-color: var(--grey-200);
   cursor: pointer;
+}
+
+.selected {
+  background-color: var(--green-400);
+  color: var(--green-900);
 }
