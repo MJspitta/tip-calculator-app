@@ -76,6 +76,9 @@ main {
   border: none;
 }
 .input-box > input:focus {
+  outline: none;
+}
+.input-box:not(.tip-sect):focus-within {
   outline: 2px solid var(--green-400);
 }
 .input-box:not(.tip-sect) {
@@ -124,7 +127,6 @@ main {
   color: var(--green-900);
   cursor: pointer;
 }
-
 
 
 .result-section {
@@ -184,4 +186,36 @@ main {
 .selected {
   background-color: var(--green-400);
   color: var(--green-900);
+}
+
+@media screen and (max-width: 43rem) {
+  main {
+    height: auto;
+    /* min-height: 100vh; */
+    display: block;
+    text-align: center;
+    margin: 4rem auto 0;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    text-align: left;
+    gap: 2rem;
+    margin-top: 4rem;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .calc-section {
+    gap: 2rem;
+    padding-bottom: 0;
+  }
+
+  .tips-sect {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .result-section {
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+  }
 }
